@@ -1,0 +1,263 @@
+@import "compass_twitter_bootstrap"; /* Use this to get all of Bootstrap's @mixins and $variables */
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  padding-top: 0;
+  min-height: 1830px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  color: #4f4f4f;
+}
+
+p {
+  color: #4f4f4f;
+  font-size: 14px;
+  line-height: 22px;  
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
+}
+hr {
+  padding: 12px 0;
+  border-bottom: 1px solid #CECECE;
+}
+
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  img {
+    width: 100%;
+  }
+}
+
+.container {
+  position: relative;
+  width: 880px;
+  padding-left: 60px;
+}
+.top {
+  margin-bottom: 60px;
+  div {
+    width: 130px;
+    border-top: 15px solid #482e28;
+    &:first-child {
+      width: 160px;
+    }
+  }
+}
+
+.side {
+  position: fixed;
+  font-family: 'NeoRetroFill';
+  font-size: 18px;
+   text-align: center;
+  .logo {
+    margin-bottom: 30px;
+    margin-top: 3px;
+  }
+  ul {
+    margin-left: 0;
+    li {  
+      list-style-type: none;
+      margin-bottom: 9px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #d5d5d5;
+      &:last-child {
+        border-bottom: none;
+      }
+      a {
+        color: #4f4f4f;
+        &:hover {
+          color: #d4613f;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+.row-fix {
+  position: relative;
+}
+.fix {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+}
+.main {
+  #tickets {
+    margin-bottom: 40px;
+  }
+  .jump:before {
+    display: block;
+    content: " ";
+    margin-top: -72px;
+    height: 72px;
+    visibility: hidden;
+  }
+  .mobile-logo {
+    display: none;
+    margin-bottom: 30px;
+  }
+  h2 {
+    color: #4f4f4f;
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 40px;
+  }
+  h3 {
+    font-size: 28px;  
+  }
+  h4 {
+    color: #292929;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .row {
+    margin-bottom: 30px;
+  }
+  .calendar {
+    .span2 {
+      background-color: #398fc0;
+      height: 90px;
+      width: 130px;
+      padding: 30px 0;
+      font-size: 30px;
+      color: #FFF;
+      text-shadow: 0 -1px 0 #1d4861;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      span {
+        display: block;
+        font-size: 79px;
+        font-weight: 700;
+        margin-top: 35px;
+      }
+      &:first-child {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 9px;
+        letter-spacing: 1px;
+        text-shadow: 0 -1px 0 #743523;
+        background: #d4613f url(/images/bg.calendar.red.jpg) no-repeat bottom left;
+        span {
+          margin-top: 50px;
+        }
+        &:hover {
+          text-decoration: none;
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+  .sponsors {
+    margin-top: 20px;
+    div {
+      height: 150px;
+      background-color: #398fc0;
+      p {
+        padding: 20px;
+        font-size: 18px;
+        color: #FFF;
+        text-align: center;
+        font-weight: bolder;
+      }
+    }
+    .span10 p {
+      font-size: 50px;
+      line-height: 53px;
+    }
+    .span5 p {
+      font-size: 32px;
+      line-height: 36px;
+    }
+    .row {
+      background: none;
+      margin-bottom: 20px;
+    }
+    .span2 {
+      width: 130px;
+    }
+    img {
+      outline: 1px solid #d5d5d5;
+    }
+  }
+  .faqs {
+    margin-top: 35px;
+    ol {
+      margin-left: 0;
+    }
+  }
+}
+
+// mobile layout.
+@media screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
+  .bg {
+    display: none;
+  }
+  .container {
+    width: 580px;
+    padding-left: 40px;
+  }
+  .top {
+    .first {
+      display: none;
+    }
+    .offset1 {
+      margin-left: 0;
+    }
+  }
+  .side {
+    display: none;
+  }
+  .main {
+    margin-left: 0;
+    .mobile-logo {
+      display: block;
+    }
+    p {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+    h2, h3 {
+      font-size: 36px;
+    }
+    h3 {
+      margin-bottom: 15px;
+    }
+    h4 {
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 10px;
+    }
+    .sponsors {
+      margin-top: 40px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@font-face {
+    font-family: 'NeoRetroFill';
+    src: url('/fonts/NEORF___-webfont.eot');
+    src: url('/fonts/NEORF___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/NEORF___-webfont.woff') format('woff'),
+         url('/fonts/NEORF___-webfont.ttf') format('truetype'),
+         url('/fonts/NEORF___-webfont.svg#NeoRetroFillRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
